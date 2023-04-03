@@ -36,10 +36,11 @@ include_once("connectdb.php");
 <?php
     if(isset($_POST['submit']))
     {
+        $id = $_POST['id'];
         $name = $_POST['name'];
         $item = $_POST['item'];
         $feedback = $_POST['feedback'];
-        $query = "INSERT INTO customers('c_name','name_item','review_product') VALUES('$name','$item','$feedback')";
+        $query = "INSERT INTO customers VALUES('$id','$name','$item','$feedback')";
         $result = mysqli_query($conn,$query);
         if($result)
         {
