@@ -4,6 +4,7 @@ include_once("connectdb.php");
 <html>
 <body>
 <form method="post">
+    <br>
 <input type="text" name="t" placeholder="enter table name here" required>
 <input type="submit" name="submit">
 </form>
@@ -16,7 +17,7 @@ if(isset($_POST['submit'])){
         c_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         c_name VARCHAR(30) NOT NULL,
         name_item VARCHAR(30) NOT NULL,
-        review_product VARCHAR(50) NOT NULL,
+        review_product VARCHAR(50) NOT NULL
     )";
     if(mysqli_query($conn,$sql)){
         echo "table created successfully";
@@ -24,4 +25,5 @@ if(isset($_POST['submit'])){
         print "table not created";
     }
 }
+mysqli_close($conn);
 ?>
