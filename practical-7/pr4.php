@@ -11,6 +11,10 @@ include_once("connectdb.php");
     <table border="1px">
         <form method="post">
             <tr>
+                <td>Customer ID:</td>
+                <td><input type="text" name="id" /></td>
+            </tr>
+            <tr>
                 <td>Customer Name:</td>
                 <td><input type="text" name="name" /></td>
             </tr>
@@ -35,7 +39,7 @@ include_once("connectdb.php");
         $name = $_POST['name'];
         $item = $_POST['item'];
         $feedback = $_POST['feedback'];
-        $query = "INSERT INTO customer VALUES('$name','$item','$feedback')";
+        $query = "INSERT INTO customers('c_name','name_item','review_product') VALUES('$name','$item','$feedback')";
         $result = mysqli_query($conn,$query);
         if($result)
         {
