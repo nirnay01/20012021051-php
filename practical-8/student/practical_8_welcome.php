@@ -37,8 +37,6 @@ background-color: #f1f1f1;
 margin: auto;
 /* width is 50% */
 width: 50%;
-/* border is 3px solid black */
-border: 3px solid #000;
 
 }
 
@@ -68,18 +66,49 @@ text-align: center;
 button{
 text-align: center;
 }
+div{
+		/* align center */
+		margin: auto;
+		/* width is 50% */
+		/* width: 50%; */
+
+		text-align: center;
+		color: #000;
+		/* give a  border */
+		border: 3px solid #000;
+		/* give a padding */	
+		padding: 10px;
+
+
+	}
+    .btnb{
+        background-color: #87DEE7;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .btnr{
+        /* give red color */
+        background-color: #FF0000;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
 </style>
 <body>
-<h1>Welcome, <?php echo $name; ?>!</h1>
+    <div><h1>Welcome, <?php echo $name; ?>!</h1>
 <p>Your enrollment is <?php echo $enrollment; ?> and your branch is <?php echo $branch; ?>.</p>
 <img src="uploads/<?php echo $photo; ?>" alt="Profile Photo">
 <br>
-<button>
+<button class="btnb">
 <a href="practical_8_changepd.php">Change Password</a>
 </button>
 <br>
-<button>
+<button class="btnr">
 <a href="practical_8_logout.php">Logout</a>
 </button>
+</div>
 </body>
 </html>

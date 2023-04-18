@@ -42,12 +42,6 @@ $errorMsg = "Please fill out all fields.";
 	body {
 	/* background color is light grey */
 	background-color: #f1f1f1;
-	/* alignment is center */
-	margin: auto;
-	/* width is 50% */
-	width: 50%;
-	/* border is 3px solid black */
-	border: 3px solid #000;
 	}
 
 	h1{
@@ -66,6 +60,7 @@ $errorMsg = "Please fill out all fields.";
 
 	input{
 	display: inline-block;
+	margin-top:20px;
 	}
 
 	button{
@@ -80,8 +75,37 @@ $errorMsg = "Please fill out all fields.";
 	a:hover{
 	color: #111;
 	}
+	div{
+		/* align center */
+		margin: auto;
+		/* width is 50% */
+		width: 50%;
+
+		text-align: center;
+		color: #000;
+		/* give a  border */
+		border: 3px solid #000;
+		/* give a padding */	
+		padding: 10px;
+	}
+	.btnb{
+        background-color: #87DEE7;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .btnr{
+        /* give red color */
+        background-color: #FF0000;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
 	</style>
 	<body>
+		<div class="center">
 	<h1>Login</h1>
 	<?php if (isset($errorMsg)): ?>
 <p style="color: red;"><?php echo $errorMsg; ?></p>
@@ -91,11 +115,12 @@ $errorMsg = "Please fill out all fields.";
 <input type="text" id="enrollment" name="enrollment" required><br>
 <label for="password">Password:</label>
 <input type="password" id="password" name="password" required><br>
-<input type="submit" name="submit" value="Login">
+<input type="submit" name="submit" value="Login" class="btnb">
 </form>
 <br>
-<button>
+<button class="btnb">
 <a href="practical_8_registration.php">Create New Account</a>
 </button>
+</div>
 </body>
 </html>

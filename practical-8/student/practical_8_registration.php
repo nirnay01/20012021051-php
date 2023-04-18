@@ -49,25 +49,37 @@
 			cursor: pointer;
 			padding: 5px 10px;
 		}
+		div{
+		/* align center */
+		margin: auto;
+		/* width is 50% */
+		width: 50%;
 
-		.error {
-			background-color: #f2dede;
-			border-color: #ebccd1;
-			color: #a94442;
-			padding: 10px;
-			margin-bottom: 20px;
-		}
-
-		.success {
-			background-color: #dff0d8;
-			border-color: #d6e9c6;
-			color: #3c763d;
-			padding: 10px;
-			margin-bottom: 20px;
-		}
-		
+		text-align: center;
+		color: #000;
+		/* give a  border */
+		border: 3px solid #000;
+		/* give a padding */	
+		padding: 10px;
+	}
+	.btnb{
+        background-color: #87DEE7;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .btnr{
+        /* give red color */
+        background-color: #FF0000;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
 	</style>
 	<body>
+		<div>
 	<h1>Student Registration</h1>
 	<form method="post" enctype="multipart/form-data">
 	<label for="enrollment">Enrollment:</label>
@@ -80,8 +92,9 @@
 <input type="password" id="password" name="password" required><br>
 <label for="photo">Photo:</label>
 <input type="file" id="photo" name="photo" required><br>
-<input type="submit" name="submit" value="Register">
+<input type="submit" name="submit" value="Register" class="btnb">
 </form>
+</div>
 </body>
 </html>
 <?php
