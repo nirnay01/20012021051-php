@@ -124,3 +124,10 @@ $errorMsg = "Please fill out all fields.";
 </div>
 </body>
 </html>
+<!-- 1. Create Login module for Student with registration page, login page,
+welcome page, change password page and logout page.
+[Note: Student’s registration fields Enrollment, Name, Branch,
+Password, Photo]
+2. Create Admin module to perform update, delete, display records
+with order by and search operation with Student table.
+[Note: Same as grid view design] -->
